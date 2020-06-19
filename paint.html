@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>painter</title>
+		<style type="text/css">
+            body{
+                font-size: 20px ;
+                text-align: center;
+                vertical-align: middle;
+                margin-top: 20px;
+                padding-left: 0px;
+                padding-right: 0px;
+                background-color: cyan;
+                font-weight: bold;
+                color: royalblue;
+            }
+            canvas{
+                cursor: crosshair;
+                border-style: solid;
+                border-color: brown;
+                border-radius: 20px;
+                border-width: medium;
+            }
+            input[type=button]{
+                width: 95px;
+                height: 30px;
+                color: blue;
+                font-size: 20px;
+                background-color: yellow;
+                
+            }
+            input[type=number] , inpput[type=color]{
+                width: 40px;
+                height: 20px;
+                color: red;
+            }
+            #tool{
+                display: inline-block;
+                color: red;
+                
+            }
+
+
+		</style>
+		
+	</head>
+	<body>
+             
+        <div>
+            <input type="button" id="line" value="line">
+            <input type="button" id="circle" value="circle">
+            <input type="button" id="rect" value="rect">
+            <input type="button" id="eraser" value="eraser">
+            <input type="button" id="freeHand" value="freeHand">
+            Fill Colour : <input type="color" id="fillColor" >
+            Line Width : <input type="number" id="lineWidth" min="2" value="2" >
+            Stroke Colour : <input type="color" id="strokeColor" >
+            Tool :<div id="tool">"None"</div> 
+            <input type="button" id="clear" value="Clear">
+        </div>
+        <br>
+        <div>
+            <canvas id="my-canvas" height="550" width="1200"></canvas>
+        </div>
+		<script type="text/javascript" src="jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="painter.js"></script>
+	</body>
+</html>
